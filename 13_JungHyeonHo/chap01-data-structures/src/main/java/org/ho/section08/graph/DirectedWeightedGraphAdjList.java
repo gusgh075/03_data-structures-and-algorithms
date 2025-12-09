@@ -83,6 +83,7 @@ public class DirectedWeightedGraphAdjList {
   public void removeEdge(int u, int v) {
     if (u < vertices && v < vertices) {
       // u의 인접 리스트에서 목적지가 v인 간선 제거
+      // removeIf() : 컬렉션 내 요소 중 조건에 맞는 요소를 모두 제거한다
       adjList.get(u).removeIf(edge -> edge.target == v);
     }
   }
